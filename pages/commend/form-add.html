@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="PL-pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Urbex - Miejsca</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+<header>
+    <h1>Urbex</h1> <img src="../../images/logo.jpg" alt="logo">
+</header>
+<nav>
+    <ul>
+        <li><a href="../index.html">Strona główna</a></li>
+        <li><a href="../place/list.html">Obiekty</a></li>
+        <li><a href="../user/list.html">Użytkownicy</a></li>
+        <li><a href="list.html" class="active">Komentarze</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2>Nowe miejsce</h2>
+    <form class="form">
+        <label for="author-email">Autor: <span class="symbol-req"> * </span></label>
+        <input type="email" id="author-email" name="author-email" required>
+        <span id="errorName"></span>
+
+        <label for="rate">Ocena: <span class="symbol-req"> * </span></label>
+        <input type="number" id="rate" name="rate" min="0" max="5" step="0.5" required>
+        <span id="error-rate"></span>
+
+        <label for="description">Opis: *</label>
+        <textarea id="description" name="description" rows="5" cols="40" required></textarea>
+        <span id="error-description"></span>
+
+        <label for="add-date">Data dodania: <span class="symbol-req"> * </span></label>
+        <input type="date" id="add-date" name="add-date" required>
+        <span id="error-add-date"></span>
+
+        <div>
+            <p id="errorSummary"></p>
+            <input type="submit" value="Dodaj" class="btn-add">
+            <a href="list.html" class="form-btn-cancel">Anuluj</a>
+        </div>
+    </form>
+</main>
+
+<footer>
+    Bartłomiej, Tkaczyk, s22517
+</footer>
+</body>
+</html>

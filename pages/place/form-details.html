@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Urbex - Miejsca</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+<header>
+    <h1>Urbex</h1> <img src="../../images/logo.jpg" alt="logo">
+</header>
+<nav>
+    <ul>
+        <li><a href="../index.html">Strona główna</a></li>
+        <li><a href="../place/list.html">Obiekty</a></li>
+        <li><a href="../user/list.html" class="active">Użytkownicy</a></li>
+        <li><a href="../commend/list.html">Komentarze</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2>Nowe miejsce</h2>
+    <form class="form">
+        <label for="name">Nazwa miejsca: *</label>
+        <input type="text" id="name" name="name" value="Nawiedzony dom" readonly>
+        <span id="errorName"></span>
+
+        <label for="description">Opis: *</label>
+        <textarea id="description" name="description" rows="5" cols="40" readonly>bhdibahdbababna</textarea>
+        <span id="errorDescription"></span>
+
+        <label for="longitude">Długoś geograficzna: *</label>
+        <input type="number" id="longitude" name="longitude" value="82.9999" readonly>
+        <span id="errorLongitude"></span>
+
+        <label for="latitude">Długoś geograficzna: *</label>
+        <input type="number" id="latitude" name="latitude" value="62.8767" readonly>
+        <span id="errorLatitude"></span>
+    </form>
+
+    <a href="form-edit.html" class="form-btn-submit">Edytuj</a>
+
+    <h2>Szczegóły</h2>
+    <table class="table-list">
+        <thead>
+        <tr>
+            <th>email</th>
+            <th>ocena</th>
+            <th>treść</th>
+            <th>data dodania</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>jan.kowalski@email.pl</th>
+            <th>4</th>
+            <th>vklsnvjknbkjd</th>
+            <th>12-09-2000 12:09</th>
+        </tr>
+        <tr>
+            <th>ewa.nowak@email.pl</th>
+            <th>4</th>
+            <th>bhbsvhjv bsvhb vjh sss</th>
+            <th>12-09-2000 12:39</th>
+        </tr>
+        </tbody>
+    </table>
+    <a href="list.html">Powrót</a>
+</main>
+
+<footer>
+    Bartłomiej, Tkaczyk, s22517
+</footer>
+</body>
+</html>

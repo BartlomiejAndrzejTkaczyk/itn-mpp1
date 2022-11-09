@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Urbex</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+<header>
+    <h1>Urbex</h1> <img src="../../images/logo.jpg" alt="logo">
+</header>
+<nav>
+    <ul>
+        <li><a href="../index.html">Strona główna</a></li>
+        <li><a href="../place/list.html">Obiekty</a></li>
+        <li><a href="../user/list.html" class="active">Użytkownicy</a></li>
+        <li><a href="../commend/list.html">Komentarze</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2>Dodaj użytkownika</h2>
+    <form>
+        <label for="email">email: <span class=symbol-req>*</span></label>
+        <div>
+            <input type="email" id="email" name="email" required>
+            <span id="errorEmail"></span>
+        </div>
+
+        <label for="password">hasło: <span class=symbol-req>*</span></label>
+        <div>
+            <input type="text" id="password" name="password" required>
+            <span id="errorPassword"></span>
+        </div>
+
+        <label for="nickname">nickname: <span class=symbol-req>*</span></label>
+        <div>
+            <input type="text" id="nickname" name="nickname" required>
+            <span id="errorNickname"></span>
+        </div>
+
+        <label for="telephone">telefon: </label>
+        <div>
+            <input type="tel" id="telephone" name="telephone">
+            <span id="errorTelephone"></span>
+        </div>
+
+        <div>
+            <p id="errorSummary"></p>
+            <input type="submit" value="Dodaj">
+            <a href="list.html">Anuluj</a>
+        </div>
+    </form>
+</main>
+
+<footer>
+    Bartłomiej, Tkaczyk, s22517
+</footer>
+</body>
+</html>

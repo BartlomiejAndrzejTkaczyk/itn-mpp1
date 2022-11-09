@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Urbex - Miejsca</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+<header>
+    <h1>Urbex</h1> <img src="../../images/logo.jpg" alt="logo">
+</header>
+<nav>
+    <ul>
+        <li><a href="../index.html">Strona główna</a></li>
+        <li><a href="../place/list.html" class="active">Obiekty</a></li>
+        <li><a href="../user/list.html">Użytkownicy</a></li>
+        <li><a href="../commend/list.html">Komentarze</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2>Nowe miejsce</h2>
+    <form class="form">
+        <label for="name">Nazwa miejsca: <span class=symbol-req>*</span></label>
+        <div>
+            <input type="text" id="name" name="name" value="Nawiedzony dom" required>
+            <span id="errorName"></span>
+        </div>
+
+        <label for="description">Opis: <span class=symbol-req>*</span></label>
+        <div>
+            <textarea id="description" name="description" rows="5" cols="40" required>bhdibahdbababna</textarea>
+            <span id="errorDescription"></span>
+        </div>
+
+        <label for="longitude">Długoś geograficzna: <span class=symbol-req>*</span></label>
+        <div>
+            <input type="number" id="longitude" name="longitude" value="82.9999" required>
+            <span id="errorLongitude"></span>
+        </div>
+
+        <label for="latitude">Długoś geograficzna: <span class=symbol-req>*</span></label>
+        <div>
+            <input type="number" id="latitude" name="latitude" value="62.8767" required>
+            <span id="errorLatitude"></span>
+        </div>
+
+        <div>
+            <p id="errorSummary"></p>
+            <input type="submit" value="Edytuj" class="form-btn-submit">
+            <a href="list.html" class="form-btn-cancel">Anuluj</a>
+        </div>
+    </form>
+</main>
+
+<footer>
+    Bartłomiej, Tkaczyk, s22517
+</footer>
+</body>
+</html>
