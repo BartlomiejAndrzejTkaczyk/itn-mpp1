@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl-PL">
 
 <head>
     <meta charset="UTF-8">
     <title>Urbex - Miejsca</title>
     <link rel="stylesheet" href="../../css/style.css">
 </head>
-
 <body>
 <header>
     <h1>Urbex</h1> <img src="../../images/logo.jpg" alt="logo">
@@ -17,37 +16,30 @@
         <li><a href="../place/list.html" class="active">Obiekty</a></li>
         <li><a href="../user/list.html">Użytkownicy</a></li>
         <li><a href="../commend/list.html">Komentarze</a></li>
+        <li><a class="invalid-form" href="form-invalid.html">error</a></li>
     </ul>
 </nav>
 
 <main>
     <h2>Nowe miejsce</h2>
-    <form class="form">
+    <form class="form" action="list.html">
         <label for="name">Nazwa miejsca: <span class=symbol-req>*</span></label>
-        <div>
-            <input type="text" id="name" name="name" value="Nawiedzony dom" required>
-            <span id="errorName"></span>
-        </div>
+        <input type="text" id="name" name="name" value="Nawiedzony dom" required>
+        <span id="errorName"></span>
 
         <label for="description">Opis: <span class=symbol-req>*</span></label>
-        <div>
-            <textarea id="description" name="description" rows="5" cols="40" required>bhdibahdbababna</textarea>
-            <span id="errorDescription"></span>
-        </div>
+        <textarea id="description" name="description" rows="5" cols="40" required>bhdibahdbababna</textarea>
+        <span id="errorDescription"></span>
 
         <label for="longitude">Długoś geograficzna: <span class=symbol-req>*</span></label>
-        <div>
-            <input type="number" id="longitude" name="longitude" value="82.9999" required>
-            <span id="errorLongitude"></span>
-        </div>
+        <input type="number" id="longitude" name="longitude" value="82.9999" required>
+        <span id="errorLongitude"></span>
 
         <label for="latitude">Długoś geograficzna: <span class=symbol-req>*</span></label>
-        <div>
-            <input type="number" id="latitude" name="latitude" value="62.8767" required>
-            <span id="errorLatitude"></span>
-        </div>
+        <input type="number" id="latitude" name="latitude" value="62.8767" required>
+        <span id="errorLatitude"></span>
 
-        <div>
+        <div class="form-btn">
             <p id="errorSummary"></p>
             <input type="submit" value="Edytuj" class="form-btn-submit">
             <a href="list.html" class="form-btn-cancel">Anuluj</a>

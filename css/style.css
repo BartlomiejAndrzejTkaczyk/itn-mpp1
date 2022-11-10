@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    min-width: 600px;
+    min-width: 260px;
 }
 
 header,
@@ -111,6 +111,7 @@ main h2 {
 }
 
 .list-actions-button-details,
+.btn-return,
 .list-actions-button-edit,
 .list-actions-button-delete{
     display: inline-block;
@@ -123,6 +124,7 @@ main h2 {
 .list-actions-button-delete,
 .form-btn-submit,
 .form-btn-cancel,
+.btn-return,
 .btn-add{
     border: none;
     border-radius: 5px;
@@ -139,16 +141,24 @@ main h2 {
     margin: 0.6rem 0 0;
 }
 
-.list-actions-button-delete,
-.list-actions-button-edit{
-    margin-right: 1rem;
-}
+/*.list-actions-button-delete,*/
+/*.list-actions-button-edit{*/
+/*    margin-right: 1rem;*/
+/*}*/
 
 .list-actions-button-details{
     background-color: #2980b9;
 }
 
 .list-actions-button-details:hover{
+    background-color: #3496db;
+}
+
+.btn-return{
+    background-color: #2980b9;
+}
+
+.btn-return:hover{
     background-color: #3496db;
 }
 
@@ -202,21 +212,26 @@ textarea{
 }
 
 .form{
-    margin-left: 2rem;
-    width: 300px;
+    display: grid;
+    grid-template-columns: 150px 300px 1fr;
+    gap: 1rem;
 }
 
 .form select,
 .form input[type="text"],
 .form input[type="number"],
-.form input[type="date"],
 .form input[type="email"],
+.form input[type="tel"],
+.form input[type="date"],
 textarea{
     border: 1px solid #7f8c8d;
     color: #2c3e50;
     border-radius: 5px;
     padding: 0.5rem;
-    width: 100%;
+}
+
+.form-btn{
+    grid-column: 1 / span 2;
 }
 
 .form label{
@@ -270,4 +285,118 @@ textarea{
     line-height: 2.25rem;
     color: #e74c3c;
     margin-bottom: 0;
+}
+
+header {
+    overflow: auto;
+}
+
+header h1 {
+    float: left;
+}
+
+header img {
+    float: right;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li{
+    float: left;
+}
+
+nav ul{
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+}
+
+@media all and (max-width: 720px){
+    header{
+        flex-direction: column;
+    }
+
+    header h1{
+        text-align: center ;
+    }
+
+    header img{
+        align-self: center;
+    }
+
+    nav ul{
+        flex-wrap: wrap;
+    }
+
+    nav ul li{
+        flex-basis: 50%;
+        text-align: center;
+    }
+
+    nav ul li a{
+        display: block;
+    }
+
+    .form{
+        grid-template-columns: 1fr;
+        row-gap: unset;
+        margin-left: unset;
+    }
+
+    .form-btn{
+        grid-column: 1 / 1;
+    }
+}
+
+@media all and (max-width: 400px){
+    body,
+    nav,
+    nav ul,
+    header,
+    main,
+    footer{
+        margin: 0;
+    }
+
+    nav ul li{
+        flex-basis: 100%;
+    }
+}
+
+.invalid-form{
+    color: #7d0101;
+}
+
+#popup{
+    position: absolute;
+    margin-top:1rem;
+    left: 40%;
+    width: 20%;
+    height: 6rem;
+    background-color: #a90e0e;
+    border-radius: 5px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+#popup:target{
+    opacity: 1;
+}
+
+#popup div{
+    color: white;
+    margin-top:1.5rem;
+    text-align: center;
+}
+
+#close{
+    margin-top: 1.5rem;
+}
+
+#close a{
+    text-decoration: none;
+    color: white;
 }

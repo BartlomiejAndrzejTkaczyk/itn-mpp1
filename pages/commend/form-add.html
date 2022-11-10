@@ -21,8 +21,8 @@
 </nav>
 
 <main>
-    <h2>Nowe miejsce</h2>
-    <form class="form">
+    <h2>Nowy komentarz</h2>
+    <form class="form" action="list.html">
         <label for="author-email">Autor: <span class="symbol-req"> * </span></label>
         <input type="email" id="author-email" name="author-email" required>
         <span id="errorName"></span>
@@ -39,7 +39,7 @@
         <input type="date" id="add-date" name="add-date" required>
         <span id="error-add-date"></span>
 
-        <div>
+        <div class="form-btn">
             <p id="errorSummary"></p>
             <input type="submit" value="Dodaj" class="btn-add">
             <a href="list.html" class="form-btn-cancel">Anuluj</a>

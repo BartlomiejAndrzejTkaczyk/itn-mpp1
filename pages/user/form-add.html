@@ -24,30 +24,22 @@
     <h2>Dodaj użytkownika</h2>
     <form>
         <label for="email">email: <span class=symbol-req>*</span></label>
-        <div>
             <input type="email" id="email" name="email" required>
             <span id="errorEmail"></span>
-        </div>
 
         <label for="password">hasło: <span class=symbol-req>*</span></label>
-        <div>
             <input type="text" id="password" name="password" required>
             <span id="errorPassword"></span>
-        </div>
 
         <label for="nickname">nickname: <span class=symbol-req>*</span></label>
-        <div>
             <input type="text" id="nickname" name="nickname" required>
             <span id="errorNickname"></span>
-        </div>
 
         <label for="telephone">telefon: </label>
-        <div>
             <input type="tel" id="telephone" name="telephone">
             <span id="errorTelephone"></span>
-        </div>
 
-        <div>
+        <div class="form-btn">
             <p id="errorSummary"></p>
             <input type="submit" value="Dodaj">
             <a href="list.html">Anuluj</a>
